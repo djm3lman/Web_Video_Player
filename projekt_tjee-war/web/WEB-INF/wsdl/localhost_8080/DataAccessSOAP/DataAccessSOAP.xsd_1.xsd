@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.3.payara-p2 (PAYARA-3579-ff11a82; 2019-03-07T10:51:27+0530) JAXWS-RI/2.3.2 JAXWS-API/2.3.2 JAXB-RI/2.3.2 JAXB-API/2.3.2 git-revision#unknown. --><xs:schema xmlns:tns="http://ws.projekt/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws.projekt/">
+
+<xs:element name="addFilm" type="tns:addFilm"/>
+
+<xs:element name="addFilmResponse" type="tns:addFilmResponse"/>
+
+<xs:element name="deleteFilm" type="tns:deleteFilm"/>
+
+<xs:element name="deleteFilmResponse" type="tns:deleteFilmResponse"/>
+
+<xs:element name="getFilmData" type="tns:getFilmData"/>
+
+<xs:element name="getFilmDataResponse" type="tns:getFilmDataResponse"/>
+
+<xs:element name="getFilmName" type="tns:getFilmName"/>
+
+<xs:element name="getFilmNameResponse" type="tns:getFilmNameResponse"/>
+
+<xs:element name="showFilmList" type="tns:showFilmList"/>
+
+<xs:element name="showFilmListResponse" type="tns:showFilmListResponse"/>
+
+<xs:complexType name="getFilmName">
+<xs:sequence>
+<xs:element name="filmId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getFilmNameResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addFilm">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="data" type="xs:base64Binary" nillable="true" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addFilmResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="showFilmList">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="showFilmListResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteFilm">
+<xs:sequence>
+<xs:element name="filmId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteFilmResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getFilmData">
+<xs:sequence>
+<xs:element name="filmId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getFilmDataResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
